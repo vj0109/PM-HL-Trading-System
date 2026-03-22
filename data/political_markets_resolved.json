@@ -1,0 +1,758 @@
+[
+  {
+    "condition_id": "0xf5b392f05bef47906dc0a753def7625069dfd1c2ece454fecf695c048fc118d1",
+    "question": "Will Andrew Yang win the Democratic primary for Mayor of New York City in 2021?",
+    "closed": true,
+    "resolved": false,
+    "volume": "1258244.218619",
+    "event_title": "Will Andrew Yang win the Democratic primary for Mayor of New York City in 2021?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x2552743e295cc1c0fcb8d1b1a1207cacd0702d22f6df27ad5b2a87288b0a1654",
+    "question": "Will Joe Biden be officially inaugurated as President in-person outside the US capitol on January 20th, 2021?",
+    "closed": true,
+    "resolved": false,
+    "volume": "874854.208294",
+    "event_title": "Will Joe Biden be officially inaugurated as President in-person outside the US capitol on January 20th, 2021?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x95e75611f0dec880111c16e22735266a9c7527a09de78bd2e5aa02edec53d843",
+    "question": "Will Eric Adams win the Democratic primary for Mayor of New York City in 2021?",
+    "closed": true,
+    "resolved": false,
+    "volume": "825708.069188",
+    "event_title": "Will Eric Adams win the Democratic primary for Mayor of New York City in 2021?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xc20d895097d0f871a4ab7af0ae2a45deba6bcb2044f8abfd53fa2ef6e2865b60",
+    "question": "Will Donald Trump be President of the USA on September 30, 2021?",
+    "closed": true,
+    "resolved": false,
+    "volume": "706186.829087",
+    "event_title": "Will Donald Trump be President of the USA on September 30, 2021?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x8c97d244f3335ef090e89858aac649bca80522333b21b5386a09410815aa191f",
+    "question": "Will Volodymyr Zelenskyy be President of Ukraine on April 22, 2022?",
+    "closed": true,
+    "resolved": false,
+    "volume": "530056.919362",
+    "event_title": "Will Volodymyr Zelenskyy be President of Ukraine on April 22, 2022?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x6e3bd12da116437a870065baccb841b689ba3aaa3b81ae2b2d609e9099f628af",
+    "question": "Will NYC fully reopen by July 1?",
+    "closed": true,
+    "resolved": false,
+    "volume": "351152.724349",
+    "event_title": "Will NYC fully reopen by July 1?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x09c43f456a7c325b66cfecc67b40162d96ef2df1bf80230f08e6191a1ffb9e9f",
+    "question": "Will Joe Biden be President of the USA on June 30, 2021?",
+    "closed": true,
+    "resolved": false,
+    "volume": "328039.664065",
+    "event_title": "Will Joe Biden be President of the USA on June 30, 2021?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x0f0194c3dfcf5a40939044b3ce41e70041c8d2af2817070c488c271b51df02b5",
+    "question": "How many Senators will vote to convict Donald Trump on incitement by March 1?",
+    "closed": true,
+    "resolved": false,
+    "volume": "229323.537104",
+    "event_title": "How many Senators will vote to convict Donald Trump on incitement by March 1?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xcae800240e03485fa46cdba08998d8b93a602ef2362692d67a481559d5fc6f8f",
+    "question": "Will President Biden say \u201cfolks\u201d in his first Joint Address?",
+    "closed": true,
+    "resolved": false,
+    "volume": "215201.251789",
+    "event_title": "Will President Biden say \u201cfolks\u201d in his first Joint Address?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x59a03bd2fff12c18983eabdb9556e954af26d23efbba557124584b16c04c866c",
+    "question": "Will Sergey Lavrov and Antony Blinken meet in February 2022?",
+    "closed": true,
+    "resolved": false,
+    "volume": "185753.861302",
+    "event_title": "Will Sergey Lavrov and Antony Blinken meet in February 2022?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x94c477e301371fec2b51cc8bb89fe0ad0d2b6d76d647e91c7e53b5811f9706fd",
+    "question": "Will Marine Le Pen win 2nd place in the first round of the 2022 French presidential election?",
+    "closed": true,
+    "resolved": false,
+    "volume": "166568.446884",
+    "event_title": "Will Marine Le Pen win 2nd place in the first round of the 2022 French presidential election?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x194f86d21942137070b3504b9d8be809fd5df943079bf8f8a3ea5434e31a9fbe",
+    "question": "Will there be more than 4 million Ukrainian refugees by March 24?",
+    "closed": true,
+    "resolved": false,
+    "volume": "166050.625562",
+    "event_title": "Will there be more than 4 million Ukrainian refugees by March 24?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xbbe3671096b94190bf5545a5691d041314c45f2c70cde974a901a724fc6054e9",
+    "question": "Will Donald Trump be President of the USA on November 30, 2021? ",
+    "closed": true,
+    "resolved": false,
+    "volume": "164021.54426",
+    "event_title": "Will Donald Trump be President of the USA on November 30, 2021? ",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x2d116fc50243574d748eb606676ebeb6cf99cf7c44162e8a7c52fe61b6183955",
+    "question": "Will 'House of Gucci' get 86% or higher Audience Score on Rotten Tomatoes?",
+    "closed": true,
+    "resolved": false,
+    "volume": "149912.150466",
+    "event_title": "Will 'House of Gucci' get 86% or higher Audience Score on Rotten Tomatoes?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x3aa9ffe57f9053a9a52acb4aacffa55d402d5ac21b073ec734850e38e100a001",
+    "question": "Who will win the 2021 Peruvian Presidential Election?",
+    "closed": true,
+    "resolved": false,
+    "volume": "141910.048966",
+    "event_title": "Who will win the 2021 Peruvian Presidential Election?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x7e630c56dd5b2183702f95af58006c14ae4fca0f90e541b4fdb76571787ea4d4",
+    "question": "Will Amber Heard be found liable for defaming Johnny Depp?",
+    "closed": true,
+    "resolved": false,
+    "volume": "131657.54065",
+    "event_title": "Will Amber Heard be found liable for defaming Johnny Depp?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xa391f70b105d4347af6eb0b8c17d4216823d2c407ef775bd02465d271cfbf3b6",
+    "question": "Will Joe Biden be President of the USA on January 6, 2022?",
+    "closed": true,
+    "resolved": false,
+    "volume": "119525.929235",
+    "event_title": "Will Joe Biden be President of the USA on January 6, 2022?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x67a0cce00585d84d7f6f34a23af51aad741182406cc547d8c16730088b353a22",
+    "question": "How many new US residential sales will the U.S. Census Bureau report for June?",
+    "closed": true,
+    "resolved": false,
+    "volume": "99956.498592",
+    "event_title": "How many new US residential sales will the U.S. Census Bureau report for June?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x2797fccc231de0253e8053dc79b7cb583d4f7eb1153bc58daa3790e598f79b7a",
+    "question": "Will any Belarusian bank be disconnected from SWIFT by April 30, 2022?",
+    "closed": true,
+    "resolved": false,
+    "volume": "99554.189894",
+    "event_title": "Will any Belarusian bank be disconnected from SWIFT by April 30, 2022?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x29ce959ff8f1ff05cd24e50be4f6b66c04642afaecc88daac5096d5bb877a31e",
+    "question": "Will Trump\u2019s Truth Social launch on the iOS app store by March 31st?",
+    "closed": true,
+    "resolved": false,
+    "volume": "95857.416713",
+    "event_title": "Will Trump\u2019s Truth Social launch on the iOS app store by March 31st?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x9749f460b3ba6edb376b662d03c2c7cc377a7e2d1f47c347cc1ef20d36c99e2a",
+    "question": "2022 Norway Chess: Will Magnus Carlsen lose any game?",
+    "closed": true,
+    "resolved": false,
+    "volume": "89615.677225",
+    "event_title": "2022 Norway Chess: Will Magnus Carlsen lose any game?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xd03cfcf7cdb67553ae118972f65623cf74de6a1247f14e120ab968e9eb9cb241",
+    "question": "Will Matt Gaetz continue to hold Congressional office through June 1, 2021?",
+    "closed": true,
+    "resolved": false,
+    "volume": "83842.54972",
+    "event_title": "Will Matt Gaetz continue to hold Congressional office through June 1, 2021?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x45ec86a218ceee06cd220ad50d50c9408e7368f50ac95404acc4d92d5c04ab08",
+    "question": "Will Joe Biden's approval rating be 45.0% or higher at the end of October 15?",
+    "closed": true,
+    "resolved": false,
+    "volume": "63285.211282",
+    "event_title": "Will Joe Biden's approval rating be 45.0% or higher at the end of October 15?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x483169eff72d7ad87237bb6ebcfb146461e069fdece516b6be3e40db4dba3317",
+    "question": "Will the Liberal Party win a majority in the 2021 Canadian federal election?",
+    "closed": true,
+    "resolved": false,
+    "volume": "61669.845585",
+    "event_title": "Will the Liberal Party win a majority in the 2021 Canadian federal election?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xd8e0d11beb6553c922bb46204191a9d7ba8c0fd17bd6b203b6d5c5557f31c063",
+    "question": "Will $MATIC reach $1 by July 31?",
+    "closed": true,
+    "resolved": false,
+    "volume": "61187.964931",
+    "event_title": "Will $MATIC reach $1 by July 31?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x76443f63073150f4c166911db0e7e5716c1080d3b19a98c122ae4bd40f166a85",
+    "question": "Will Alito deliver the final majority opinion in Dobbs v. Jackson Women's Health Organization?",
+    "closed": true,
+    "resolved": false,
+    "volume": "60579.87748",
+    "event_title": "Will Alito deliver the final majority opinion in Dobbs v. Jackson Women's Health Organization?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x7b16cfbf52fbc47b952ec76971c47ff820a88b97dd30034540e082a0f8580fd1",
+    "question": "Will Emily Ratajkowski\u2019s NFT go for more than $2 million at Christie\u2019s?",
+    "closed": true,
+    "resolved": false,
+    "volume": "56683.898391",
+    "event_title": "Will Emily Ratajkowski\u2019s NFT go for more than $2 million at Christie\u2019s?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xff5edea413a8de0d338a031fc015f146f78e445b00bd6c97379e1620f5a57e34",
+    "question": "Oscars 2022: Will 'The Power Of The Dog\" win the Best Picture?",
+    "closed": true,
+    "resolved": false,
+    "volume": "54583.945415",
+    "event_title": "Oscars 2022: Will 'The Power Of The Dog\" win the Best Picture?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x7c6af23191a6bbf7bbae3e1c3de88789d049763edfcbe00ac8811c2c5a7ce7f9",
+    "question": "Will Joe Biden's approval rating be 43.0% or higher at the end of November 13?",
+    "closed": true,
+    "resolved": false,
+    "volume": "51131.097246",
+    "event_title": "Will Joe Biden's approval rating be 43.0% or higher at the end of November 13?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x37547754d4c0e50f3fd73ebc12b9ead4df40d116b666dc2e593d2e2fcd1a0731",
+    "question": "Will UST (TerraUSD) regain its peg by May 20?",
+    "closed": true,
+    "resolved": false,
+    "volume": "49506.172708",
+    "event_title": "Will UST (TerraUSD) regain its peg by May 20?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x70952782193d07f17fedb91cd4a84165da877605e8be22522411a89f8dc0ac8e",
+    "question": "Will Katie Britt win the 2022 Alabama Republican Senate nomination?",
+    "closed": true,
+    "resolved": false,
+    "volume": "48356.451672",
+    "event_title": "Will Katie Britt win the 2022 Alabama Republican Senate nomination?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x9d1a322d6836724aecd5cf94315d469a408f05df1ebdceccb80dbf971b6461c3",
+    "question": "Will Joe Biden's approval rating be 54% or higher on April 28, 2021?",
+    "closed": true,
+    "resolved": false,
+    "volume": "44169.302332",
+    "event_title": "Will Joe Biden's approval rating be 54% or higher on April 28, 2021?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x314934b53f2aa8bc734914238aea57c3baa26ac287e5bf8ed177803a164386b1",
+    "question": "Who will win the Democratic Nomination in the TX-28 House election: Jessica Cisneros or Henry Cuellar?",
+    "closed": true,
+    "resolved": false,
+    "volume": "43675.577262",
+    "event_title": "Who will win the Democratic Nomination in the TX-28 House election: Jessica Cisneros or Henry Cuellar?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x192eab3d07021a94b97938a0a79e8025f34c9421f5d8d0039f41d31aaee74ff9",
+    "question": "Will Donald Trump announce a run for President by October 1, 2021?",
+    "closed": true,
+    "resolved": false,
+    "volume": "39803.650192",
+    "event_title": "Will Donald Trump announce a run for President by October 1, 2021?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xb5078ced072303839269f16f5c551a697a6e173235fb2048b6f45d357e11eb40",
+    "question": "Will Daniil Medvedev play in the 2022 French Open?",
+    "closed": true,
+    "resolved": false,
+    "volume": "39260.092169",
+    "event_title": "Will Daniil Medvedev play in the 2022 French Open?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x7f6ad51666c66f7034e14a1f071ed4bf6bfa6292b765d5f78471a07738967703",
+    "question": "Will Kippenberger's \"Martin, Into the Corner, You Should Be Ashamed of Yourself\" sell for more than 15 million on Christie's?",
+    "closed": true,
+    "resolved": false,
+    "volume": "38227.322822",
+    "event_title": "Will Kippenberger's \"Martin, Into the Corner, You Should Be Ashamed of Yourself\" sell for more than 15 million on Christie's?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x1ef5450e4815a8b5ad51a8d20d4d469e3aa17561c738f125bd36a25168d1877b",
+    "question": "Will $ETH hit 3 digits (sub $1000) by June 30?",
+    "closed": true,
+    "resolved": false,
+    "volume": "31884.703108",
+    "event_title": "Will $ETH hit 3 digits (sub $1000) by June 30?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x91179f335aac3c7ff603e9b7341430b395f539ae45ead9b0671e71cfba2912fb",
+    "question": "Will the City of Ottawa cease its state of emergency by March 2, 2022?",
+    "closed": true,
+    "resolved": false,
+    "volume": "31846.80287",
+    "event_title": "Will the City of Ottawa cease its state of emergency by March 2, 2022?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x1f3a760a69047345591fb56328cf7328aa5ed2b2e367956851bbdcdc41b4b92a",
+    "question": "Will Volodymyr Zelenskyy and Vladimir Putin meet in person before June 2022?",
+    "closed": true,
+    "resolved": false,
+    "volume": "31683.102666",
+    "event_title": "Will Volodymyr Zelenskyy and Vladimir Putin meet in person before June 2022?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xc56c90c9349a2d3eb71f75636ea009d45fa1a5ad86b24cf6286ad003e5aa02dd",
+    "question": "Will Andy Warhol\u2019s \u201cTwo Marilyns\u201d sell for more than $18 million at Christie\u2019s?",
+    "closed": true,
+    "resolved": false,
+    "volume": "27210.689679",
+    "event_title": "Will Andy Warhol\u2019s \u201cTwo Marilyns\u201d sell for more than $18 million at Christie\u2019s?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xec5477bb25fc5aeb076b9372235fce1d2d6d913a603497fddaca9a746cf2700f",
+    "question": "Will US student loan payments resume by May 2, 2022?",
+    "closed": true,
+    "resolved": false,
+    "volume": "26709.212395",
+    "event_title": "Will US student loan payments resume by May 2, 2022?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x6476b9a645d3222aa878869c736fc6c3febb54bcf13f0fe4f80329ca90689338",
+    "question": "Will NATO declare a No Fly-Zone over any Ukrainian territory by April 30, 2022?",
+    "closed": true,
+    "resolved": false,
+    "volume": "24081.217104",
+    "event_title": "Will NATO declare a No Fly-Zone over any Ukrainian territory by April 30, 2022?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x2d44beea7e5f6c16e6810687de65ee265282c6a0dab9011fe80840e47c2d9afb",
+    "question": "NCAA: Will the Gonzaga Bulldogs win March Madness 2022?",
+    "closed": true,
+    "resolved": false,
+    "volume": "22916.340794",
+    "event_title": "NCAA: Will the Gonzaga Bulldogs win March Madness 2022?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x2da3ebf77ce1d5269f5b776984e171779ff553e83d68eff78c52806827fc4d10",
+    "question": "What will Pak\u2019s Sotheby\u2019s auction generate in total sales?",
+    "closed": true,
+    "resolved": false,
+    "volume": "22486.024485",
+    "event_title": "What will Pak\u2019s Sotheby\u2019s auction generate in total sales?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x501dfaa1f16a134ff16e5845d3842cc5d4811dbf35783f232382258eaaf103c4",
+    "question": "Will Bitcoin ($BTC) hit $20,000 or less by June 30?",
+    "closed": true,
+    "resolved": false,
+    "volume": "19977.919314",
+    "event_title": "Will Bitcoin ($BTC) hit $20,000 or less by June 30?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x1aa1430fd472f84d65c983286b0bec028c08eb4a867779db115f2f3935dc6a64",
+    "question": "Will President Biden issue an executive order mentioning cryptocurrency by February 25?",
+    "closed": true,
+    "resolved": false,
+    "volume": "19791.583411",
+    "event_title": "Will President Biden issue an executive order mentioning cryptocurrency by February 25?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x64178857620c77b31bff43d8801500245320b7a66d3af1042a79da8bfd4c0ccf",
+    "question": "Will Joe Biden's FiveThirtyEight approval rating be 41.5% or higher on May 28?",
+    "closed": true,
+    "resolved": false,
+    "volume": "19308.774032",
+    "event_title": "Will Joe Biden's FiveThirtyEight approval rating be 41.5% or higher on May 28?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x7772dabc0f09b5ca505e197d6e24c1f764fd88ff48b1b49fa91a6bf1da24a49e",
+    "question": "Will Joe Biden's approval rating be 54% or higher on May 19, 2021?",
+    "closed": true,
+    "resolved": false,
+    "volume": "18298.399976",
+    "event_title": "Will Joe Biden's approval rating be 54% or higher on May 19, 2021?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x181e1e2f031d2528f837995f5420da42be20bc0eaa96f19e8685ac7ca6a2d510",
+    "question": "Will President Biden speak for longer than 1 hour at his Joint Address?",
+    "closed": true,
+    "resolved": false,
+    "volume": "17912.951737",
+    "event_title": "Will President Biden speak for longer than 1 hour at his Joint Address?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xb787a819f3308367fb15f95d781e0548695fd43848ad6b77d1cc215b49933577",
+    "question": "Will Donald Trump announce a run for President by November 1, 2021?",
+    "closed": true,
+    "resolved": false,
+    "volume": "17396.946699",
+    "event_title": "Will Donald Trump announce a run for President by November 1, 2021?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x65ea91e46ced0648d853fdfbe0071ba6f59231f3f40267ef91a8f0d32a294af5",
+    "question": "Will any of the Secretary of State, Secretary of Defense, or Chairman of the Joint Chiefs of Staff no longer hold their position on October 1, 2021?",
+    "closed": true,
+    "resolved": false,
+    "volume": "16996.379379",
+    "event_title": "Will any of the Secretary of State, Secretary of Defense, or Chairman of the Joint Chiefs of Staff no longer hold their position on October 1, 2021?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xce5a85a7965264b4919eff6fd0d4a1f984937ccd4323e2c9e2e9fb2a50eb0b55",
+    "question": "Will Novak Djokovic play in the 2022 US Open?",
+    "closed": true,
+    "resolved": false,
+    "volume": "15472.951805",
+    "event_title": "Will Novak Djokovic play in the 2022 US Open?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x944ea0f81996ce5efe76db01f6ee1163b451c1204f68f59be3d74d85315cce6f",
+    "question": "Will van Gogh\u2019s \u201cLe pont de Trinquetaille\u201d sell for more than $35 million at Christie\u2019s?",
+    "closed": true,
+    "resolved": false,
+    "volume": "14883.638432",
+    "event_title": "Will van Gogh\u2019s \u201cLe pont de Trinquetaille\u201d sell for more than $35 million at Christie\u2019s?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xc678e3bf331d6fd6bc2412ac03f5af4fcc213ce5c829eb19a45f1300606de052",
+    "question": "Will Zelenskyy and Biden meet in person by April 30?",
+    "closed": true,
+    "resolved": false,
+    "volume": "14738.113977",
+    "event_title": "Will Zelenskyy and Biden meet in person by April 30?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x6493782dff605d8431b2fa601f7972ed51ff24f9670517b37b81421d119fceb4",
+    "question": "Will Tiger Woods play in the 2022 US Masters Tournament?",
+    "closed": true,
+    "resolved": false,
+    "volume": "14402.664433",
+    "event_title": "Will Tiger Woods play in the 2022 US Masters Tournament?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x78ef12f5773091eb5f20632a78b32ddac8c70055aa67189fb2daefc92df1a069",
+    "question": "Will President Biden mention coronavirus 3 or more times in his first Joint Address?",
+    "closed": true,
+    "resolved": false,
+    "volume": "12516.371718",
+    "event_title": "Will President Biden mention coronavirus 3 or more times in his first Joint Address?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x491af977a2d69275f7aa59a969abfdf5cf15882e3756674b526f774abbce268a",
+    "question": "How many Yea votes in the House for the American Rescue Plan?",
+    "closed": true,
+    "resolved": false,
+    "volume": "12273.011142",
+    "event_title": "How many Yea votes in the House for the American Rescue Plan?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xda862b9646a8cb3b2fef8a12fc428bbce7ee20ed28fa6be459236b18c4722332",
+    "question": "Will President Biden mention Donald Trump in his first Joint Address?",
+    "closed": true,
+    "resolved": false,
+    "volume": "12134.630335",
+    "event_title": "Will President Biden mention Donald Trump in his first Joint Address?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x43c9390e90d569dbe0430d29e3924595d7a90ba9f77d9ebef45dd58bfa784dee",
+    "question": "Will Matt Dolan win 2nd place in the Republican primary for the 2022 United States Senate election in Ohio?",
+    "closed": true,
+    "resolved": false,
+    "volume": "11496.002141",
+    "event_title": "Will Matt Dolan win 2nd place in the Republican primary for the 2022 United States Senate election in Ohio?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xcf4248bdb8766f4c2175bd1fc023cc63461d74b8a0edf6390125a68e82dac31e",
+    "question": "Will Terra USD (UST) fall below 50 cents by July 30, 2022?",
+    "closed": true,
+    "resolved": false,
+    "volume": "11420.451277",
+    "event_title": "Will Terra USD (UST) fall below 50 cents by July 30, 2022?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xe77ffef52dbee1a1bdd7d8caf5ed7f115387fff50fe7cd08cd2c60e23c7530de",
+    "question": "Will Vice President Harris cast another tie-breaking vote by July 15, 2021?",
+    "closed": true,
+    "resolved": false,
+    "volume": "11137.036215",
+    "event_title": "Will Vice President Harris cast another tie-breaking vote by July 15, 2021?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x36604fc3dfa3b0b67dc06396e040ec2be2b1e1fc46746f355ae7fd8774248997",
+    "question": "Will Pablo Picasso\u2019s \u201cFemme assise pr\u00e8s d'une fen\u00eatre (Marie-Th\u00e9r\u00e8se)\u201d sell for more than $55 million at Christie\u2019s?",
+    "closed": true,
+    "resolved": false,
+    "volume": "10841.664196",
+    "event_title": "Will Pablo Picasso\u2019s \u201cFemme assise pr\u00e8s d'une fen\u00eatre (Marie-Th\u00e9r\u00e8se)\u201d sell for more than $55 million at Christie\u2019s?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xb083e83a0b0be60768581c31ef083c2956423f7454d739f9515707ca3ee4c764",
+    "question": "GRAMMYs 2022: Will Lady Gaga's and Tony Bennet's \"I Get a Kick Out of You\" win Record of the Year?",
+    "closed": true,
+    "resolved": false,
+    "volume": "10155.839285",
+    "event_title": "GRAMMYs 2022: Will Lady Gaga's and Tony Bennet's \"I Get a Kick Out of You\" win Record of the Year?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x3fea77fdf40ca1960a2b1caf9f8f85deaa9bd1fc4facfdc852343e394b4f5428",
+    "question": "Will Joe Biden's approval rating be 53% or higher on June 10, 2021?",
+    "closed": true,
+    "resolved": false,
+    "volume": "9953.07401",
+    "event_title": "Will Joe Biden's approval rating be 53% or higher on June 10, 2021?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x50dd95293786d66dc50eb1808782f7a07263e337ff75ef234e82248a6717d5b8",
+    "question": "Will Vice President Harris cast 17 or more tie-breaking votes in 2021?",
+    "closed": true,
+    "resolved": false,
+    "volume": "9733.034229",
+    "event_title": "Will Vice President Harris cast 17 or more tie-breaking votes in 2021?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xd84fb74bfd64873d707c80e9153769e7d74d6ea1989c332aa9813eb691f4d8e7",
+    "question": "Will the Progressive Conservative Party win a majority in the 2022 Ontario General Election?",
+    "closed": true,
+    "resolved": false,
+    "volume": "9075.765627",
+    "event_title": "Will the Progressive Conservative Party win a majority in the 2022 Ontario General Election?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x1c8151e1a5546a21a357cd77ccb9c5c7a0060dcf549fbf073f9b2edce5ef0eea",
+    "question": "Will the Russian Ruble (RUB) fall below $0.012 by June 12?",
+    "closed": true,
+    "resolved": false,
+    "volume": "8781.579914",
+    "event_title": "Will the Russian Ruble (RUB) fall below $0.012 by June 12?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x7aca3968156208551f9aabc5ab743e9ca08b29f3e7c2b99dc1ddb0fe5136fb8f",
+    "question": "Will Joe Biden's disapproval rating be 52.0% or higher at the end of November?",
+    "closed": true,
+    "resolved": false,
+    "volume": "8454.961056",
+    "event_title": "Will Joe Biden's disapproval rating be 52.0% or higher at the end of November?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x7a4a7f1082f61d81f89313ecf1b1c267c5fa2457cd2b8ad86219fd3277dce537",
+    "question": "Will $ETH hit $1,000 or $2,000 first? ",
+    "closed": true,
+    "resolved": false,
+    "volume": "7971.676815",
+    "event_title": "Will $ETH hit $1,000 or $2,000 first? ",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xaf87935ac5143229b0762b2f1dc5ac381a6b6dbed7b259f3e8bb2a77b22a79ea",
+    "question": "Will Biden and Putin meet by March 21, 2022?",
+    "closed": true,
+    "resolved": false,
+    "volume": "7890.383308",
+    "event_title": "Will Biden and Putin meet by March 21, 2022?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x1300fce41cc0d9b75fabfd5b99948e64bec3075d1359a6732b347d1a4cd26dc5",
+    "question": "Will @DonaldJTrumpJr post more than 70 new tweets by November 8th?",
+    "closed": true,
+    "resolved": false,
+    "volume": "6082.718977",
+    "event_title": "Will @DonaldJTrumpJr post more than 70 new tweets by November 8th?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xb51413b1742558cfa33ce5c7b064e4ae9ffcd3249a578874b01bfbbafd544ea2",
+    "question": "Will Pablo Picasso\u2019s \u201cNu couch\u00e9 \u00e0 la libellule\u201d sell for more than HK$68M at Christie\u2019s?",
+    "closed": true,
+    "resolved": false,
+    "volume": "4680.039695",
+    "event_title": "Will Pablo Picasso\u2019s \u201cNu couch\u00e9 \u00e0 la libellule\u201d sell for more than HK$68M at Christie\u2019s?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x6c77d227c068eccfa38e313fd29c8c03bedc2fbfde2e6b02e81a089624b94227",
+    "question": "Will Joe Biden's FiveThirtyEight approval rating be 41.7% or more on February 9?",
+    "closed": true,
+    "resolved": false,
+    "volume": "3667.754742",
+    "event_title": "Will Joe Biden's FiveThirtyEight approval rating be 41.7% or more on February 9?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x9dc9732980f33d11e98aeb9c118e8f251063c59ef94d6f5e899e4bde942b07a8",
+    "question": "Will Solana ($SOL) hit $35 or $50 first?",
+    "closed": true,
+    "resolved": false,
+    "volume": "3060.73219",
+    "event_title": "Will Solana ($SOL) hit $35 or $50 first?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xa7b353b33288e7c0a03a6e57bad393ca37cd19a0f17f9f3c8ef47dae83afd52d",
+    "question": "Will Adrian Ghenie's \"The Collector I\" sell for more than HK$65M at Christie\u2019s?",
+    "closed": true,
+    "resolved": false,
+    "volume": "2947.966171",
+    "event_title": "Will Adrian Ghenie's \"The Collector I\" sell for more than HK$65M at Christie\u2019s?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x945bb99fd3fb2550ba3b13b2aae7d1eaf8327e2f6379a0ac9532ba7864a5bf31",
+    "question": "What will the outcome of Elon Musk\u2019s November 6th Twitter Poll be?",
+    "closed": true,
+    "resolved": false,
+    "volume": "2683.266074",
+    "event_title": "What will the outcome of Elon Musk\u2019s November 6th Twitter Poll be?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xaf650de3bdcba5237bddae9581ef5e63704fa61959d91b9eebbbf35eb30d18b9",
+    "question": "Will Proposal 100 for Compound Finance pass?",
+    "closed": true,
+    "resolved": false,
+    "volume": "2523.525656",
+    "event_title": "Will Proposal 100 for Compound Finance pass?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x6cd63e0f5e2e3a0dc739bf05e5b179ddaa954b41ff769c6405369337f77094b3",
+    "question": "Will Novak Djokovic play in the 2022 French Open?",
+    "closed": true,
+    "resolved": false,
+    "volume": "2465.659568",
+    "event_title": "Will Novak Djokovic play in the 2022 French Open?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x64c480de663a4bb6f40bad72a6e32987686d8c043a54632c85bd2c29b3c1ac12",
+    "question": "Will Vincent van Gogh's \u201cJeune homme au bleuet\u201d (Lot 20C) sell for more than $7m at Christie\u2019s on November 11?",
+    "closed": true,
+    "resolved": false,
+    "volume": "2312.965805",
+    "event_title": "Will Vincent van Gogh's \u201cJeune homme au bleuet\u201d (Lot 20C) sell for more than $7m at Christie\u2019s on November 11?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xe65e3ceb6fccd5c42d5a6f8196089c55350ea6d510d75c1259b35af9a5033c5d",
+    "question": "Will Pablo Picasso's \u201cFemme accroupie en costume turc II (Jacqueline)\u201d (Lot 44C) sell for more than $30m at Christie\u2019s on November 11?",
+    "closed": true,
+    "resolved": false,
+    "volume": "2196.670507",
+    "event_title": "Will Pablo Picasso's \u201cFemme accroupie en costume turc II (Jacqueline)\u201d (Lot 44C) sell for more than $30m at Christie\u2019s on November 11?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xc2e7c314a1c7f774a298db245322789f634c4e2c804dc05b2f09c06f283369d6",
+    "question": "Who will win the primaries of Les R\u00e9publicains in France?",
+    "closed": true,
+    "resolved": false,
+    "volume": "2090.722133",
+    "event_title": "Who will win the primaries of Les R\u00e9publicains in France?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0x1e429054e89f5037cce923a2cd9f7dfb879bbadc0954dfa378123bef6a13e12a",
+    "question": "Will Biden say \"recession\" in his Tuesday remarks on inflation?",
+    "closed": true,
+    "resolved": false,
+    "volume": "1984.032159",
+    "event_title": "Will Biden say \"recession\" in his Tuesday remarks on inflation?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xce583a64dc07b966c41c26226deca066e5bf275aed0c0348bdc40b9638a36ad9",
+    "question": "Will Kathryn Garcia or Maya Wiley finish with more votes in the final reallocation of the NYC Democratic primary?",
+    "closed": true,
+    "resolved": false,
+    "volume": "413.922605",
+    "event_title": "Will Kathryn Garcia or Maya Wiley finish with more votes in the final reallocation of the NYC Democratic primary?",
+    "is_political": true
+  },
+  {
+    "condition_id": "0xc39329f90610c12a16489d2ff70db0702c40e13c53f45d401e7a6eda940ed0f7",
+    "question": "Will Edward Hopper's \u201cTwo Puritans\u201d (Lot 39C) sell for more than $15m at Christie\u2019s on November 11?",
+    "closed": true,
+    "resolved": false,
+    "volume": "366.98783",
+    "event_title": "Will Edward Hopper's \u201cTwo Puritans\u201d (Lot 39C) sell for more than $15m at Christie\u2019s on November 11?",
+    "is_political": true
+  }
+]

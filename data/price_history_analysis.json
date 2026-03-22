@@ -1,0 +1,20 @@
+{
+  "endpoint_counts": {
+    "/prices-history?market=0xf5b392f05bef47906dc0a753def7625069dfd1c2ece454fecf695c048fc118d1&interval=max&fidelity=720": 1,
+    "/prices-history?market=0x2552743e295cc1c0fcb8d1b1a1207cacd0702d22f6df27ad5b2a87288b0a1654&interval=max&fidelity=720": 1,
+    "/prices-history?market=0x95e75611f0dec880111c16e22735266a9c7527a09de78bd2e5aa02edec53d843&interval=max&fidelity=720": 1,
+    "/prices-history?market=0xc20d895097d0f871a4ab7af0ae2a45deba6bcb2044f8abfd53fa2ef6e2865b60&interval=max&fidelity=720": 1,
+    "/prices-history?market=0x8c97d244f3335ef090e89858aac649bca80522333b21b5386a09410815aa191f&interval=max&fidelity=720": 1
+  },
+  "method_counts": {
+    "get_last_trade_price": 5
+  },
+  "best_endpoint": [
+    "/prices-history?market=0xf5b392f05bef47906dc0a753def7625069dfd1c2ece454fecf695c048fc118d1&interval=max&fidelity=720",
+    1
+  ],
+  "best_method": [
+    "get_last_trade_price",
+    5
+  ]
+}
