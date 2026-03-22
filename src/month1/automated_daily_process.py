@@ -39,9 +39,11 @@ class AutomatedDailyProcess:
         
         # Automated assessment parameters
         self.daily_target = 7  # Target 7 predictions per day
-        self.min_volume_threshold = 100  # Minimum $100 24h volume (lowered)
-        self.max_days_to_resolution = 1000  # Maximum 1000 days out (increased)
-        self.min_ev_threshold = 0.01  # Minimum 1% expected value (lowered)
+        self.min_volume_threshold = 20   # Minimum $20 24h volume (lowered for gaming markets)
+        self.max_days_to_resolution = 90  # Maximum 90 days out (FIXED: need feedback!)
+        self.min_days_to_resolution = 1   # Include same-day for fast feedback (esports/gaming)
+        self.preferred_resolution_range = (7, 60)  # Sweet spot: 1 week to 2 months
+        self.min_ev_threshold = 0.01  # Minimum 1% expected value
         
         logger.info("Automated Daily Process initialized")
     
@@ -77,16 +79,26 @@ class AutomatedDailyProcess:
         scored_markets = []
         
         for market in markets:
-            # Basic filters
+            # Basic filters (FIXED: Better resolution timing)
+            days_out = market['days_to_resolution']
             if (market['volume_24h'] < self.min_volume_threshold or
-                market['days_to_resolution'] > self.max_days_to_resolution or
-                market['days_to_resolution'] < 2 or
+                days_out > self.max_days_to_resolution or
+                days_out < self.min_days_to_resolution or
                 len(market['question']) < 20):
                 continue
             
-            # Calculate priority score
+            # Calculate priority score (FIXED: Prefer feedback-friendly timing)
             volume_score = min(market['volume_24h'] / 10000, 10)  # 0-10 based on volume
-            time_score = max(0, 10 - market['days_to_resolution'] / 20)  # Prefer shorter term
+            
+            # Time score: Prefer 7-60 day sweet spot for fast feedback
+            optimal_range = self.preferred_resolution_range
+            if optimal_range[0] <= days_out <= optimal_range[1]:
+                time_score = 10  # Max score for optimal timing
+            elif days_out < optimal_range[0]:
+                time_score = 5   # Reduced score for very short term
+            else:
+                time_score = max(0, 10 - (days_out - optimal_range[1]) / 10)  # Penalty for long term
+            
             question_score = min(len(market['question']) / 20, 5)  # Prefer detailed questions
             
             priority_score = volume_score + time_score + question_score
