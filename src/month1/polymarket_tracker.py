@@ -21,7 +21,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('../../logs/polymarket_tracker.log'),
+        logging.FileHandler('logs/polymarket_tracker.log'),
         logging.StreamHandler()
     ]
 )
