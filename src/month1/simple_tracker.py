@@ -27,10 +27,11 @@ class SimplePolymarketTracker:
         }
         
     def get_active_markets(self, limit=20):
-        """Get highest volume active markets"""
+        """Get highest volume active markets with <30 day filter"""
         try:
+            # Get more events to ensure we find enough short-term markets
             response = requests.get(f"{self.gamma_api}/events", params={
-                "limit": limit,
+                "limit": min(limit * 3, 100),  # Get more events to filter from
                 "order": "volume24hr", 
                 "ascending": "false",
                 "active": "true",
@@ -40,15 +41,29 @@ class SimplePolymarketTracker:
             
             events = response.json()
             markets = []
+            now = datetime.now(timezone.utc)
             
             for event in events:
                 event_markets = event.get('markets', [])
                 for market in event_markets:
                     if market.get('active', False):
-                        market_data = self.extract_market_features(market)
-                        if market_data:
-                            markets.append(market_data)
-                            
+                        # Calculate days to resolution first
+                        end_date_str = market.get('endDate')
+                        if end_date_str:
+                            try:
+                                end_date = datetime.fromisoformat(end_date_str.replace('Z', '+00:00'))
+                                days_out = (end_date - now).days
+                                
+                                # VJ requirement: Only markets resolving in 1-30 days
+                                if 1 <= days_out <= 30:
+                                    market_data = self.extract_market_features(market)
+                                    if market_data:
+                                        markets.append(market_data)
+                            except Exception:
+                                continue
+            
+            # Sort by volume descending and return top results
+            markets.sort(key=lambda x: x['volume_24h'], reverse=True)
             return markets[:limit]
             
         except Exception as e:

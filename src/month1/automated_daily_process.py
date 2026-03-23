@@ -39,7 +39,7 @@ class AutomatedDailyProcess:
         
         # Automated assessment parameters
         self.daily_target = 7  # Target 7 predictions per day
-        self.min_volume_threshold = 20   # Minimum $20 24h volume (lowered for gaming markets)
+        self.min_volume_threshold = 15   # Minimum $15 24h volume (gaming markets for fast feedback)
         self.max_days_to_resolution = 30   # Maximum 30 days (VJ requirement for feedback loop!)
         self.min_days_to_resolution = 1    # Include same-day for fast feedback
         self.preferred_resolution_range = (7, 30)  # Sweet spot: 1 week to 1 month
