@@ -40,9 +40,9 @@ class AutomatedDailyProcess:
         # Automated assessment parameters
         self.daily_target = 7  # Target 7 predictions per day
         self.min_volume_threshold = 20   # Minimum $20 24h volume (lowered for gaming markets)
-        self.max_days_to_resolution = 90  # Maximum 90 days out (FIXED: need feedback!)
-        self.min_days_to_resolution = 1   # Include same-day for fast feedback (esports/gaming)
-        self.preferred_resolution_range = (7, 60)  # Sweet spot: 1 week to 2 months
+        self.max_days_to_resolution = 30   # Maximum 30 days (VJ requirement for feedback loop!)
+        self.min_days_to_resolution = 1    # Include same-day for fast feedback
+        self.preferred_resolution_range = (7, 30)  # Sweet spot: 1 week to 1 month
         self.min_ev_threshold = 0.01  # Minimum 1% expected value
         
         logger.info("Automated Daily Process initialized")
@@ -90,14 +90,14 @@ class AutomatedDailyProcess:
             # Calculate priority score (FIXED: Prefer feedback-friendly timing)
             volume_score = min(market['volume_24h'] / 10000, 10)  # 0-10 based on volume
             
-            # Time score: Prefer 7-60 day sweet spot for fast feedback
+            # Time score: Prefer 7-30 day sweet spot for fast feedback
             optimal_range = self.preferred_resolution_range
             if optimal_range[0] <= days_out <= optimal_range[1]:
-                time_score = 10  # Max score for optimal timing
+                time_score = 10  # Max score for optimal timing (7-30 days)
             elif days_out < optimal_range[0]:
-                time_score = 5   # Reduced score for very short term
+                time_score = 8   # Good score for very short term (1-7 days)
             else:
-                time_score = max(0, 10 - (days_out - optimal_range[1]) / 10)  # Penalty for long term
+                time_score = 0   # Zero score for >30 days (no feedback value)
             
             question_score = min(len(market['question']) / 20, 5)  # Prefer detailed questions
             

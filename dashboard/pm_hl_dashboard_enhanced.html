@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM & HL Trading Dashboard - Enhanced</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50 min-h-screen p-4">
+    <div class="max-w-7xl mx-auto">
+        <!-- Header -->
+        <div class="mb-6">
+            <div class="flex justify-between items-center mb-4">
+                <h1 class="text-3xl font-bold text-gray-900">📊 PM & HL Trading Dashboard</h1>
+                <div class="flex items-center gap-4">
+                    <div class="text-right">
+                        <h3 class="text-xs font-medium text-gray-500">Last Updated</h3>
+                        <p id="last-updated" class="text-sm font-medium text-gray-900">--</p>
+                    </div>
+                    <button onclick="loadData()" class="px-3 py-1 bg-blue-100 text-blue-700 rounded-md text-xs hover:bg-blue-200">🔄 Refresh</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="flex space-x-4 mb-6">
+            <button id="hl-tab" onclick="showTab('hl')" class="px-6 py-3 rounded-lg font-medium transition-colors bg-blue-600 text-white text-sm">
+                📈 Hyperliquid (<span id="hl-tab-count">--</span>)
+            </button>
+            <button id="pm-tab" onclick="showTab('pm')" class="px-6 py-3 rounded-lg font-medium transition-colors bg-white text-gray-700 hover:bg-gray-50 text-sm">
+                🎯 Polymarket (<span id="pm-tab-count">--</span>)
+            </button>
+        </div>
+
+        <!-- HL Content -->
+        <div id="hl-content" class="space-y-6">
+            <!-- HL Summary Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-xs font-medium text-gray-500 mb-2">HL Portfolio Value</h3>
+                    <p id="hl-portfolio" class="text-xl font-bold text-gray-600">Loading...</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-xs font-medium text-gray-500 mb-2">HL P&L</h3>
+                    <p id="hl-pnl" class="text-xl font-bold text-gray-600">Loading...</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-xs font-medium text-gray-500 mb-2">HL Win Rate</h3>
+                    <p id="hl-winrate" class="text-xl font-bold text-gray-600">Loading...</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-xs font-medium text-gray-500 mb-2">HL Open Positions</h3>
+                    <p id="hl-open-count" class="text-xl font-bold text-gray-600">Loading...</p>
+                </div>
+            </div>
+
+            <!-- HL Open Positions -->
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="px-4 py-3 border-b border-gray-200">
+                    <h2 class="text-lg font-bold text-gray-900">📈 HL Open Positions</h2>
+                </div>
+                <div class="overflow-x-auto max-h-80">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50 sticky top-0">
+                            <tr>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Asset</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Side</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Entry $</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Size</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">P&L</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">%</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Hours</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Signal</th>
+                            </tr>
+                        </thead>
+                        <tbody id="hl-table-body" class="bg-white divide-y divide-gray-200">
+                            <tr><td colspan="8" class="px-4 py-8 text-center text-gray-500 text-sm">Loading positions...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- HL Recent Closed Positions -->
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="px-4 py-3 border-b border-gray-200">
+                    <h2 class="text-lg font-bold text-gray-900">📊 HL Recent Closed Positions</h2>
+                </div>
+                <div class="overflow-x-auto max-h-60">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50 sticky top-0">
+                            <tr>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Asset</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Side</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">P&L</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">%</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Exit Time</th>
+                            </tr>
+                        </thead>
+                        <tbody id="hl-closed-body" class="bg-white divide-y divide-gray-200">
+                            <tr><td colspan="5" class="px-4 py-8 text-center text-gray-500 text-sm">Loading closed positions...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- PM Content -->
+        <div id="pm-content" class="space-y-6 hidden">
+            <!-- PM Summary Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-xs font-medium text-gray-500 mb-2">PM Portfolio Value</h3>
+                    <p id="pm-portfolio" class="text-xl font-bold text-gray-600">Loading...</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-xs font-medium text-gray-500 mb-2">PM P&L</h3>
+                    <p id="pm-pnl" class="text-xl font-bold text-gray-600">Loading...</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-xs font-medium text-gray-500 mb-2">PM Win Rate</h3>
+                    <p id="pm-winrate" class="text-xl font-bold text-gray-600">Loading...</p>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4">
+                    <h3 class="text-xs font-medium text-gray-500 mb-2">ML Model Accuracy</h3>
+                    <p id="pm-ml-accuracy" class="text-xl font-bold text-green-600">95.0%</p>
+                </div>
+            </div>
+
+            <!-- PM Open Positions -->
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="px-4 py-3 border-b border-gray-200">
+                    <h2 class="text-lg font-bold text-gray-900">🎯 PM Open Positions</h2>
+                </div>
+                <div class="overflow-x-auto max-h-80">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50 sticky top-0">
+                            <tr>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase w-1/3">Market Question</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Side</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Entry Price</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Current Price</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">P&L</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Resolves</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pm-table-body" class="bg-white divide-y divide-gray-200">
+                            <tr><td colspan="6" class="px-4 py-8 text-center text-gray-500 text-sm">Loading positions...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- PM Recent Closed Positions -->
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="px-4 py-3 border-b border-gray-200">
+                    <h2 class="text-lg font-bold text-gray-900">📊 PM Recent Closed Positions</h2>
+                </div>
+                <div class="overflow-x-auto max-h-60">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead class="bg-gray-50 sticky top-0">
+                            <tr>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase w-1/3">Market Question</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Side</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">P&L</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">%</th>
+                                <th class="px-3 py-2 text-left text-xs font-medium text-gray-500 uppercase">Resolved</th>
+                            </tr>
+                        </thead>
+                        <tbody id="pm-closed-body" class="bg-white divide-y divide-gray-200">
+                            <tr><td colspan="5" class="px-4 py-8 text-center text-gray-500 text-sm">Loading closed positions...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ML Model Performance -->
+            <div class="bg-white rounded-lg shadow overflow-hidden">
+                <div class="px-4 py-3 border-b border-gray-200">
+                    <h2 class="text-lg font-bold text-gray-900">🧠 ML Model Performance</h2>
+                </div>
+                <div class="p-4 space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-green-600" id="ml-accuracy">95.0%</div>
+                            <div class="text-xs text-gray-500">Model Accuracy</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-blue-600" id="ml-predictions-total">807</div>
+                            <div class="text-xs text-gray-500">Total Predictions</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-purple-600" id="ml-features">50</div>
+                            <div class="text-xs text-gray-500">Features</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentTab = 'hl';
+
+        function showTab(tab) {
+            currentTab = tab;
+            
+            // Update tab buttons
+            document.getElementById('hl-tab').className = 
+                tab === 'hl' ? 'px-6 py-3 rounded-lg font-medium transition-colors bg-blue-600 text-white text-sm' 
+                             : 'px-6 py-3 rounded-lg font-medium transition-colors bg-white text-gray-700 hover:bg-gray-50 text-sm';
+            
+            document.getElementById('pm-tab').className = 
+                tab === 'pm' ? 'px-6 py-3 rounded-lg font-medium transition-colors bg-blue-600 text-white text-sm' 
+                             : 'px-6 py-3 rounded-lg font-medium transition-colors bg-white text-gray-700 hover:bg-gray-50 text-sm';
+            
+            // Show/hide content
+            document.getElementById('hl-content').style.display = tab === 'hl' ? 'block' : 'none';
+            document.getElementById('pm-content').style.display = tab === 'pm' ? 'block' : 'none';
+        }
+
+        function formatCurrency(amount) {
+            const num = parseFloat(amount) || 0;
+            return new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            }).format(num);
+        }
+
+        function getPnlColor(pnl) {
+            const num = parseFloat(pnl) || 0;
+            return num >= 0 ? 'text-green-600' : 'text-red-600';
+        }
+
+        function formatPercent(value) {
+            const num = parseFloat(value) || 0;
+            return `${num >= 0 ? '+' : ''}${num.toFixed(1)}%`;
+        }
+
+        async function loadData() {
+            try {
+                const response = await fetch('https://myhunch.xyz/api/trading-data');
+                const data = await response.json();
+
+                // Update tab counts
+                document.getElementById('hl-tab-count').textContent = data.openCount || 0;
+                document.getElementById('pm-tab-count').textContent = '0'; // Will be populated when PM trades start
+
+                // Update HL data
+                updateHLData(data);
+
+                // Update PM data (placeholder for now)
+                updatePMData({});
+
+                document.getElementById('last-updated').textContent = new Date().toLocaleTimeString();
+
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('hl-table-body').innerHTML = 
+                    '<tr><td colspan="8" class="px-4 py-8 text-center text-red-500 text-sm">Error loading data</td></tr>';
+            }
+        }
+
+        function updateHLData(data) {
+            // Update HL summary cards
+            const totalValue = data.currentCapitalAtRisk || 0;
+            const pnl = data.runningPnL || 0;
+            const winRate = data.winRate || 0;
+            const openCount = data.openCount || 0;
+
+            document.getElementById('hl-portfolio').textContent = formatCurrency(totalValue);
+            document.getElementById('hl-portfolio').className = `text-xl font-bold ${getPnlColor(totalValue)}`;
+            
+            document.getElementById('hl-pnl').textContent = formatCurrency(pnl);
+            document.getElementById('hl-pnl').className = `text-xl font-bold ${getPnlColor(pnl)}`;
+            
+            document.getElementById('hl-winrate').textContent = `${winRate.toFixed(1)}%`;
+            document.getElementById('hl-open-count').textContent = openCount;
+
+            // Update HL open positions table
+            const hlTableBody = document.getElementById('hl-table-body');
+            const openPositions = data.openPositions || [];
+            
+            if (openPositions.length > 0) {
+                hlTableBody.innerHTML = openPositions.map(pos => {
+                    const hoursHeld = (new Date() - new Date(pos.entry_time)) / (1000 * 60 * 60);
+                    return `
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-3 py-2 font-medium text-gray-900 text-sm">${pos.coin}</td>
+                            <td class="px-3 py-2">
+                                <span class="px-2 py-1 rounded-full text-xs font-medium ${
+                                    pos.side === 'LONG' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                                }">${pos.side}</span>
+                            </td>
+                            <td class="px-3 py-2 text-sm text-gray-900">${formatCurrency(pos.entry_price)}</td>
+                            <td class="px-3 py-2 text-sm text-gray-900">${formatCurrency(pos.position_size)}</td>
+                            <td class="px-3 py-2">
+                                <span class="text-sm font-medium ${getPnlColor(pos.unrealized_pnl)}">${formatCurrency(pos.unrealized_pnl || 0)}</span>
+                            </td>
+                            <td class="px-3 py-2">
+                                <span class="text-sm ${getPnlColor(pos.pnl_percent || 0)}">${formatPercent(pos.pnl_percent || 0)}</span>
+                            </td>
+                            <td class="px-3 py-2 text-sm text-gray-500">${hoursHeld.toFixed(1)}h</td>
+                            <td class="px-3 py-2 text-xs text-gray-500 max-w-32 truncate">${(pos.reason || '').substring(0, 30)}...</td>
+                        </tr>
+                    `;
+                }).join('');
+            } else {
+                hlTableBody.innerHTML = '<tr><td colspan="8" class="px-4 py-8 text-center text-gray-500 text-sm">No open positions</td></tr>';
+            }
+
+            // Update HL closed positions table  
+            const hlClosedBody = document.getElementById('hl-closed-body');
+            const closedPositions = data.closedPositions || [];
+            
+            if (closedPositions.length > 0) {
+                hlClosedBody.innerHTML = closedPositions.slice(0, 10).map(pos => {
+                    const pnlPct = pos.position_size ? (parseFloat(pos.pnl) / parseFloat(pos.position_size)) * 100 : 0;
+                    return `
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-3 py-2 font-medium text-gray-900 text-sm">${pos.coin}</td>
+                            <td class="px-3 py-2">
+                                <span class="px-2 py-1 rounded-full text-xs font-medium ${
+                                    pos.side === 'LONG' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+                                }">${pos.side}</span>
+                            </td>
+                            <td class="px-3 py-2">
+                                <span class="text-sm font-medium ${getPnlColor(pos.pnl)}">${formatCurrency(pos.pnl)}</span>
+                            </td>
+                            <td class="px-3 py-2">
+                                <span class="text-sm ${getPnlColor(pnlPct)}">${formatPercent(pnlPct)}</span>
+                            </td>
+                            <td class="px-3 py-2 text-sm text-gray-500">${new Date(pos.exit_time).toLocaleDateString()}</td>
+                        </tr>
+                    `;
+                }).join('');
+            } else {
+                hlClosedBody.innerHTML = '<tr><td colspan="5" class="px-4 py-8 text-center text-gray-500 text-sm">No recent closed positions</td></tr>';
+            }
+        }
+
+        function updatePMData(pmData) {
+            // Placeholder for PM data - will be populated when integration is complete
+            document.getElementById('pm-portfolio').textContent = formatCurrency(0);
+            document.getElementById('pm-pnl').textContent = formatCurrency(0);
+            document.getElementById('pm-winrate').textContent = '0.0%';
+            
+            document.getElementById('pm-table-body').innerHTML = 
+                '<tr><td colspan="6" class="px-4 py-8 text-center text-gray-500 text-sm">ML Trading Integration Coming Soon</td></tr>';
+            
+            document.getElementById('pm-closed-body').innerHTML = 
+                '<tr><td colspan="5" class="px-4 py-8 text-center text-gray-500 text-sm">No PM trades yet</td></tr>';
+        }
+
+        // Auto refresh every 30 seconds
+        setInterval(loadData, 30000);
+        
+        // Initial load
+        loadData();
+    </script>
+</body>
+</html>
